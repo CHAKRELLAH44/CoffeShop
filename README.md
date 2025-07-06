@@ -1,25 +1,46 @@
-# Welcome to the Serverlesspresso workshop!
+# ☕ Serverlesspresso - Backend Serverless sur AWS
 
-Serverlesspresso is a serverless coffee bar exhibit, as seen at AWS re:Invent 2021. This consists of three frontend applications and various backend microservices. This README explains the  process to completely install all the various components.
+## 📖 Description courte
 
-For workshop instructions, visit the workshop's new instructions site. Learn about the application at https://s12d.com/espresso.
+Ce projet consiste à développer un backend **serverless** pour une application de gestion de commandes de café, destinée à un événement temporaire (ex: conférence). Il permet aux clients de passer commande via un QR code, aux baristas de suivre et traiter les commandes, et d'afficher l'état en temps réel sur des écrans.  
+L'architecture repose entièrement sur les services managés AWS pour assurer **scalabilité**, **disponibilité**, et **rapidité de déploiement**.
 
-Have an idea for this workshop? Found a bug?
-If you have an idea for a module or feature in this workshop, or you have found a bug or need to report a problem, let us know!
+## 🛠️ Outils et Technologies utilisées
 
-- [Request a feature](https://github.com/aws-samples/serverless-coffee-workshop/issues/new)
-- [Report an issue](https://github.com/aws-samples/serverless-coffee-workshop/issues/new)
+- **AWS Lambda** – Exécution du code sans serveur
+- **AWS Step Functions** – Orchestration des workflows de commande
+- **Amazon EventBridge** – Gestion d’événements
+- **Amazon API Gateway** – Exposition des APIs REST
+- **Amazon DynamoDB** – Base de données NoSQL
+- **Amazon Cognito** – Authentification des utilisateurs
+- **Amazon S3** – Stockage de données statiques
+- **AWS IoT Core** – Communication temps réel avec les frontends
+- **Amazon CloudWatch** – Monitoring et alerting
 
-**To see the instructions for the workshop, visit: https://workshop.serverlesscoffee.com/.**
 
-Contact the AWS Serverless DA team for any additional help or support requests.
+## 🖼️ Captures d'écran (Exemples)
 
-Important: this application uses various AWS services and there are costs associated with these services after the Free Tier usage - please see the [AWS Pricing page](https://aws.amazon.com/pricing/) for details. You are responsible for any AWS costs incurred. No warranty is implied in this example.
+<div align="center">
+  <img src="img/1.png" alt="Barista Preview" width="45%"/>
+  <img src="img/2.png" alt="Barista Production" width="45%"/>
+</div>
+
+<div align="center">
+  <img src="img/3.png" alt="Commandes en Attente" width="45%"/>
+  <img src="img/4.png" alt="Commandes Prêtes" width="45%"/>
+</div>
 
 
+## 🚀 Comment lancer le projet
 
-==============================================
+> **Pré-requis :**
+- Compte AWS actif
+- AWS CLI configuré (`aws configure`)
+- Node.js installé (si besoin pour packaging)
+- AWS SAM ou AWS CDK recommandé pour le déploiement
 
-Copyright 2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
-SPDX-License-Identifier: MIT-0.
+### 1. Cloner le projet
+```bash
+git clone https://github.com/CHAKRELLAH44/serverlesspresso-backend.git
+cd serverlesspresso-backend
+```
